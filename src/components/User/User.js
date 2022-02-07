@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import classes from "./User.module.css";
 
 class User extends Component {
 
@@ -10,7 +11,7 @@ class User extends Component {
         }
         return (
             <>
-                <h1>Nom : {this.props.firstname} {this.props.lastname}</h1>
+                <h1 className={classes.myTitle}>Nom : {this.props.firstname} {this.props.lastname}</h1>
                 {this.props.children}
                 <div style={myStyle}>Sexe : {this.props.sexe ? "Homme" : "Femme"}</div>
             </>
